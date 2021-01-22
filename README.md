@@ -45,26 +45,20 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+# TimeTac playground
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## "Production" aplication and user
 
-### Analyzing the Bundle Size
+This section describes how to use the playground, how to access the full acount in "production" app and what stack/libraries we use.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+https://go-sandbox.timetac.com/playground
 
-### Making a Progressive Web App
+This is a special configured account, where you can access all the data, change everything, read everything. For the demonstration porpuses, you can login with the user manger and password playgroundNotSoSecure (same one is used for authorization in the app itself). The account is shared between everyone and regulary cleaned. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Proxy
 
-### Advanced Configuration
+We have a proxy in place to handle CORS issues to our sandbox (API) server. Take a look at setupProxy.js for more details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Libraries
+- [@timetac/js-client-library](https://github.com/TimeTac/js-client-library) Client library (middleware) to connect to our API.
+- not included in this project [@timetac/js-core](https://github.com/TimeTac/js-core) Core for all of our js projects + redux state management

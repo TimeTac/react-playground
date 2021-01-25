@@ -14,16 +14,15 @@ function App() {
       api.authentication.setTokens(tokensData);
       setAuthed(true);
     });
-    return;
   });
 
   useEffect(() => {
-    if (authed) {
+    if (authed && !userData) {
       api.users.readMe().then((meData) => {
         setUserData(meData);
       });
     }
-  }, [authed, api.users]);
+  }, [authed, userData, api.users]);
 
   return (
     <div className="App">

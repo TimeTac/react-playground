@@ -1847,9 +1847,15 @@
     "@babel/runtime" "^7.12.5"
 
 "@timetac/js-client-library@^0.2.4":
+<<<<<<< HEAD
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@timetac/js-client-library/-/js-client-library-0.2.4.tgz#2b7d5b3c397b30abe49b1a75baab4ca09dfb4c10"
   integrity sha512-PKyuL70LN9QwwqxDt7oTZDlrUXPkrP390WL9vSH4eN28479fUMYSzQimTCAqwsG8DSUAOGxCf35me9trGt1/+A==
+=======
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@timetac/js-client-library/-/js-client-library-0.2.7.tgz#ae5867784c0aac28f368f3f4768fc0bbfe047bca"
+  integrity sha512-nzo5cBd1zc+ihHfHppxK0nibQWnG0U/TkcNNPWV65PFn7tou2TllJz/eJkHXsDQ6pctSMKq1wxTHGvw/h7zhuw==
+>>>>>>> ec71fccca5e4f767a0fa02f3c84b0dec4754c9b0
   dependencies:
     "@types/qs" "^6.9.5"
     axios "0.21.1"

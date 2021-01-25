@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `yarn install`
+
+Installs all dependencies.
+
 ### `yarn start`
 
 Runs the app in the development mode.\
@@ -53,11 +57,11 @@ This section describes how to use the playground, how to access the full acount 
 
 https://go-sandbox.timetac.com/playground
 
-This is a special configured account, where you can access all the data, change everything, read everything. For the demonstration porpuses, you can login with the user manger and password playgroundNotSoSecure (same one is used for authorization in the app itself). The account is shared between everyone and regulary cleaned. 
+This is a special configured account, where you can access all the data, change everything, read everything. For the demonstration purposes, you can login with the user manger and password playgroundNotSoSecure (same one is used for authorization in the app itself). The account is shared between everyone and regulary cleaned. 
 
 ## Proxy
 
-We have a proxy in place to handle CORS issues to our sandbox (API) server. Take a look at setupProxy.js for more details.
+We have a proxy in place to handle CORS to our sandbox (API) server. Take a look at setupProxy.js for more details.
 
 ## Libraries
 - [@timetac/js-client-library](https://github.com/TimeTac/js-client-library) Client library (middleware) to connect to our API.

@@ -10,11 +10,13 @@ function App() {
   const [authed, setAuthed] = useState<boolean>(false);
 
   useEffect(() => {
-    api.authentication.login(authCredentials).then((tokensData) => {
-      api.authentication.setTokens(tokensData);
-      setAuthed(true);
-    });
-  });
+    if  (!authed) {
+      api.authentication.login(authCredentials).then((tokensData) => {
+        api.authentication.setTokens(tokensData);
+        setAuthed(true);
+      });
+    }
+  }, [authed, api.authentication]);
 
   useEffect(() => {
     if (authed && !userData) {

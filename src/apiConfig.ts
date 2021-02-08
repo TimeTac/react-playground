@@ -1,19 +1,11 @@
-import { Credentials, Tokens } from "@timetac/js-client-library";
+import { Credentials } from "@timetac/js-client-library";
 
 export const environment = {
   https: false,
-  host: "localhost:3003",
+  host: "localhost:3000",
   account: "playground",
   version: 3,
-  //Callback, called on refresh of the token. object of access token and refresh {accessToken, refreshTOken}  token are passed as parameter
-  onTokenRefreshedCallback: (tokens: Tokens) =>
-    console.log(`${tokens.accessToken} ${tokens.refreshToken}`),
-  //Callback called when refresh of the token fails.
-  onTokenRefreshedFailed: () => {
-    console.log("Intended action, such as logout");
-  },
-  //If true, it tries to refresh token on failed request. Default true.
-  autoRefreshToken: true,
+  autoRefreshToken: false,
 };
 
 export const authCredentials: Credentials = {

@@ -2,7 +2,7 @@
   "name": "@timetac/react-playground",
   "description": "Simple react playground project for TimeTac",
   "version": "0.1.0",
-  "homepage": "https://github.com/TimeTac/react-playground",
+  "homepage": "./",
   "repository": "github:TimeTac/react-playground",
   "license": "MIT",
   "private": false,

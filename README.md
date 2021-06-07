@@ -33,11 +33,6 @@ TimeTac provides the open source
 This library is used in the playground by default. It is also imported by
 some of TimeTac's newest products.
 
-In addition, TimeTac offers
-[@timetac/js-core](https://github.com/TimeTac/js-core),
-a second open source library taking care of
-redux state management. However, js-core is not used in this playground.
-
 ### REST API Documentation
 Please refer to https://api.timetac.com/ for a documentation of
 TimeTac's REST API.

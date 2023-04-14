@@ -1,11 +1,16 @@
-import { Credentials } from "@timetac/js-client-library";
+import { ApiConfig, Credentials } from "@timetac/js-client-library";
 
-export const environment = {
+export const environment: ApiConfig = {
   https: false,
   host: "localhost:3000",
   account: "playground",
   version: 3,
-  autoRefreshToken: false,
+  clientId: "TT_WEB_APP_PLAYGROUND", // sandbox access only
+  clientSecret: "playground", // public secret
+  accessToken: '',
+  refreshToken: '',
+  // accessToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJUVF9XRUJfQVBQX1BMQVlHUk9VTkQiLCJqdGkiOiIxZTFjOTFlNmI4ZmNlZjFjZjVhNjc2ODc4Nzk2ZjFjNDZjMzAwMWMxZGUyNDI0NzY0ZmU4YzdmZmVlYmJjOTAxNWU2MjZlZTQ2NjllMzU3MyIsImlhdCI6MTY4MTQ3NTYxMy4xODEwNDYsIm5iZiI6MTY4MTQ3NTYxMy4xODEwNDgsImV4cCI6MTY4MTU2MjAxMy4xNzkyMTcsInN1YiI6Im1hbmFnZXIiLCJzY29wZXMiOltdfQ.kqnRXE-IhtMBuKLPruh_BB6UWfj26hnWWR7NF6OibTOiWP77lW1UsWzOphzeSdzq3YuEhhV0UIkxiptdZTI18y9taH_8tehH4f8WvEtVdqKrYemhu_sWxtVFi-FsHj7nfJIiOVHEcXLczLhfn-joziJPzpf6cXqRVcMm4hMOYwMJo_nbyH4jku-oOyTp_1Nj-FvDyVvXgqsS8Hj1-HpnDNb8vLKt-00vIPkF1rH4lcdcQbmNeFy__Y0Ip56I-NCRJw6Parql6sC3bN8wH80T_CmqKtVTqM6aCrN-VhkinONsh5DmIrOrJ-sv0JCqEYO3ccjDIuO9W1ERfpKGXmBANw',
+  // refreshToken: 'def502003f8c3a3930a6b4e228afe3c9ee073f75ab81f6196a2d0cfa6fc287a3ceedcd50e06b6e283e21bd072a9b0eb73572cf28d669822b2ac808fce0acb2fecefafeadf5f4ebc88a5d7f8653ef48a2a11a2f5a17aee87cd27ce5cbdb8cf6890715fce1b798260a7d67b93f054ca7b27570e6be2f9af664a2030dbe6d2f4b7ea3b557e51011ea76883fafd05e3bdfde7feca575934729a01d136129af8201ab23b72bcfaf79bb76c0ac659eda3e9295990a4d5e9438677dc4f8422537c5c21294e186b557c24ff3d7788f8ea9abc5b33a997c69f297bacb4ba865e30a88408d7d675cfe22f9c8e798e6a80642e0b5c5d17bf646eece6333502236cf70b25b1d00499e15b37fe347928b197bc62899c4a2a7ba824fb14146e0e790fa1ed60728764a613ff36e1ab71664d13c8db3462d79c87cd23f21d73d6e8165b466f1740bd89cf5d1a95345f9f04c5d22440cef41cf04f3bab8b7d1a146c9c4282cbbe6e873e835aaa65f3b262fcc8d1ff319cf94e56f4b10c1832b8b0331452cd3',
 };
 
 export const authCredentials: Credentials = {

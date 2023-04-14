@@ -1,8 +1,8 @@
 import { ApiConfig, Credentials } from "@timetac/js-client-library";
 
 export const environment: ApiConfig = {
-  https: false,
-  host: "localhost:3000",
+  https: true,
+  host: "localhost:3000/proxy",
   account: "playground",
   version: 3,
   clientId: "TT_WEB_APP_PLAYGROUND", // sandbox access only

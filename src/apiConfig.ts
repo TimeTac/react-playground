@@ -1,11 +1,12 @@
-import { Credentials } from "@timetac/js-client-library";
+import { ApiConfig, Credentials } from "@timetac/js-client-library";
 
-export const environment = {
+export const environment: ApiConfig = {
   https: false,
   host: "localhost:3000",
   account: "playground",
   version: 3,
-  autoRefreshToken: false,
+  clientId: "TT_WEB_APP_PLAYGROUND", // sandbox access only
+  clientSecret: "playground", // public secret
 };
 
 export const authCredentials: Credentials = {

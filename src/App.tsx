@@ -1,36 +1,34 @@
 import "./App.css";
-import Api, { User } from "@timetac/js-client-library";
+import Api, { UserReadFull } from "@timetac/js-client-library";
 import { environment, authCredentials } from "./apiConfig";
 import { useEffect, useState } from "react";
 
+const api = new Api(environment);
 function App() {
-  const api = new Api(environment);
-
-  const [userData, setUserData] = useState<User>();
-  const [authed, setAuthed] = useState<boolean>(false);
+  const [userData, setUserData] = useState<UserReadFull>();
+  const [authenticated, setAuthenticated] = useState<boolean>(false);
 
   useEffect(() => {
-    if  (!authed) {
+    if (!authenticated) {
       api.authentication.login(authCredentials).then((tokensData) => {
-        api.authentication.setTokens(tokensData);
-        setAuthed(true);
+        setAuthenticated(true);
       });
     }
-  }, [authed, api.authentication]);
+  }, [authenticated]);
 
   useEffect(() => {
-    if (authed && !userData) {
+    if (authenticated && !userData) {
       api.users.readMe().then((meData) => {
-        setUserData(meData);
+        setUserData(meData.Results);
       });
     }
-  }, [authed, userData, api.users]);
+  }, [authenticated, userData]);
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>Welcome to TimeTac's react playground</h1>
-        {userData && userData.fullname}
+        <p>{userData && userData.fullname}</p>  
       </header>
     </div>
   );
